@@ -2,6 +2,7 @@ package com.devsuperior.dscommerce.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -15,6 +16,7 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
+@EqualsAndHashCode(of = "id")
 public class Product {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
