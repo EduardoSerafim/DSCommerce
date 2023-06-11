@@ -18,7 +18,6 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-@Setter
 public class User {
 
     @Id
@@ -31,8 +30,31 @@ public class User {
     private LocalDate birthDate;
     private String password;
 
+
     @OneToMany(mappedBy = "client")
     private List<Order> orders = new ArrayList<>();
 
+    public void setId(Long id) {
+        this.id = id;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }
