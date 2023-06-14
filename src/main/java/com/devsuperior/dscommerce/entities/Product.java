@@ -1,5 +1,6 @@
 package com.devsuperior.dscommerce.entities;
 
+import com.devsuperior.dscommerce.dto.ProductDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -37,6 +38,12 @@ public class Product {
     @OneToMany(mappedBy = "id.product")
     private Set<OrderItem> items = new HashSet<>();
 
+    public Product(ProductDTO dto) {
+        name = dto.getName();
+        description = dto.getDescription();
+        price = dto.getPrice();
+        imgUrl = dto.getImgUrl();
+    }
 
 
     public void setId(Long id) {
