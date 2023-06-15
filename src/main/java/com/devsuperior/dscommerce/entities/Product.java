@@ -38,14 +38,6 @@ public class Product {
     @OneToMany(mappedBy = "id.product")
     private Set<OrderItem> items = new HashSet<>();
 
-    public Product(ProductDTO dto) {
-        name = dto.getName();
-        description = dto.getDescription();
-        price = dto.getPrice();
-        imgUrl = dto.getImgUrl();
-    }
-
-
     public void setId(Long id) {
         this.id = id;
     }
