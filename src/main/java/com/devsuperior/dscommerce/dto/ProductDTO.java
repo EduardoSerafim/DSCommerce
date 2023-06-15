@@ -10,7 +10,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 @AllArgsConstructor
-@NoArgsConstructor
 @Getter
 public class ProductDTO {
 
