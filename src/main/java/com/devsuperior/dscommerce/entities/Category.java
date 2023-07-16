@@ -27,9 +27,6 @@ public class Category {
     private Set<Product> products = new HashSet<>();
 
 
-
-
-
     public void setId(Long id) {
         this.id = id;
     }
